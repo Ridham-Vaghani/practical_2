@@ -84,29 +84,30 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   Row(
                                     children: [
-                                      Image.network(
-                                        data.thumbnail ?? "",
-                                        width: size.width * 0.2,
+                                      Flexible(
+                                        flex: 30,
+                                        child:
+                                            Image.network(data.thumbnail ?? ""),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Expanded(
-                                              child: Text(
-                                                data.title ?? "",
-                                                style: const TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 18,
-                                                    fontWeight:
-                                                        FontWeight.w500),
+                                      Flexible(
+                                        flex: 70,
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Expanded(
+                                                child: Text(
+                                                  data.title ?? "",
+                                                  style: const TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                ),
                                               ),
-                                            ),
-                                            SizedBox(
-                                              width: size.width * 0.67,
-                                              child: Row(
+                                              Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment
                                                         .spaceBetween,
@@ -129,9 +130,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                                             FontWeight.bold),
                                                   ),
                                                 ],
-                                              ),
-                                            )
-                                          ],
+                                              )
+                                            ],
+                                          ),
                                         ),
                                       )
                                     ],

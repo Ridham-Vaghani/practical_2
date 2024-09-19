@@ -36,7 +36,7 @@ class Products {
   String? description;
   String? category;
   double? price;
-  double? discountPercentage;
+  dynamic discountPercentage;
   double? rating;
   int? stock;
   List<String>? tags;
@@ -145,9 +145,9 @@ class Products {
 }
 
 class Dimensions {
-  double? width;
-  double? height;
-  double? depth;
+  dynamic width;
+  dynamic height;
+  dynamic depth;
 
   Dimensions({this.width, this.height, this.depth});
 
